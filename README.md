@@ -1,3 +1,4 @@
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# grunt_angular_rails
+Grunt with angular and rails Here client and server different phase. Client side made by grunt yeoman with angular and server side plateform is ROR
+>>>>>>> bcb86c510370bf236fa406f8eed1f8c6116b14d8
