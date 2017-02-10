@@ -31,7 +31,6 @@ class Api::BankAccountsController < ApplicationController
     payee_amount = params[:bank_account][:amount]
     user =  BankAccount.find(params[:id])
     payee = BankAccount.find_by_account_number(payee_account_number)
-    debugger
     if (is_number?(payee_account_number)&&(user.avail_balance.to_f >= payee_amount.to_f && payee_account_number != user.account_number))
       payee.update_attributes(avail_balance: payee.avail_balance.to_f+payee_amount.to_f)
       Transaction.create(bank_account_id: payee.id, amount: payee_amount.to_f, transaction_type: 'credit' ,account_number: user.account_number)
